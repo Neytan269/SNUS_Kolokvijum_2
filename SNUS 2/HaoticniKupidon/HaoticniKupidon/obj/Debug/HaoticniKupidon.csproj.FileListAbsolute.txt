@@ -1,0 +1,8 @@
+C:\Users\User\Desktop\SNUS 2\HaoticniKupidon\HaoticniKupidon\bin\Debug\HaoticniKupidon.exe.config
+C:\Users\User\Desktop\SNUS 2\HaoticniKupidon\HaoticniKupidon\bin\Debug\HaoticniKupidon.exe
+C:\Users\User\Desktop\SNUS 2\HaoticniKupidon\HaoticniKupidon\bin\Debug\HaoticniKupidon.pdb
+C:\Users\User\Desktop\SNUS 2\HaoticniKupidon\HaoticniKupidon\obj\Debug\HaoticniKupidon.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\SNUS 2\HaoticniKupidon\HaoticniKupidon\obj\Debug\HaoticniKupidon.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\SNUS 2\HaoticniKupidon\HaoticniKupidon\obj\Debug\HaoticniKupidon.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\SNUS 2\HaoticniKupidon\HaoticniKupidon\obj\Debug\HaoticniKupidon.exe
+C:\Users\User\Desktop\SNUS 2\HaoticniKupidon\HaoticniKupidon\obj\Debug\HaoticniKupidon.pdb
