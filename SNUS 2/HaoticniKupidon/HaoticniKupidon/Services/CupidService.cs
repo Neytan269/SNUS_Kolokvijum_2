@@ -19,7 +19,13 @@ namespace HaoticniKupidon.Services
 
         public CupidService()
         {
-            timer = new Timer(SendLetters, null, LetterIntervalMilliseconds, LetterIntervalMilliseconds);
+            // Seed some premade people so the service can match and send letters
+            // even when only a single real client is connected.
+            SeedFakePeople();
+
+            // Trigger first delivery immediately for quicker feedback during testing,
+            // then continue with the regular interval.
+            timer = new Timer(SendLetters, null, 0, LetterIntervalMilliseconds);
         }
 
         public OperationResult InitSinglePerson(SinglePerson person)
@@ -109,20 +115,33 @@ namespace HaoticniKupidon.Services
 
         private void SendLetters(object state)
         {
+            Console.WriteLine("[CupidService] SendLetters triggered.");
             List<Delivery> deliveries = new List<Delivery>();
 
             lock (syncRoot)
             {
+                // Only consider receivers that have an active callback (connected clients).
                 foreach (RegisteredPerson receiver in people.Values.ToList())
                 {
+                    if (receiver == null || receiver.Callback == null)
+                    {
+                        if (receiver != null)
+                        {
+                            Console.WriteLine("[CupidService] Skipping {0} (no callback)", receiver.Person.Username);
+                        }
+                        continue;
+                    }
+
                     if (receiver.WaitingForConfirmation)
                     {
+                        Console.WriteLine("[CupidService] Skipping {0} (waiting confirmation)", receiver.Person.Username);
                         continue;
                     }
 
                     RegisteredPerson sender = FindBestSender(receiver);
                     if (sender == null)
                     {
+                        Console.WriteLine("[CupidService] No sender found for {0}", receiver.Person.Username);
                         continue;
                     }
 
@@ -148,6 +167,31 @@ namespace HaoticniKupidon.Services
                 catch (TimeoutException)
                 {
                     MarkAsAvailable(delivery.Receiver.Person.Username);
+                }
+            }
+        }
+
+        private void SeedFakePeople()
+        {
+            var sample = new[]
+            {
+                new SinglePerson { Username = "alice", City = "Zagreb", Age = 28, PhoneNumber = "0911111111" },
+                new SinglePerson { Username = "bob", City = "Zagreb", Age = 30, PhoneNumber = "0912222222" },
+                new SinglePerson { Username = "carol", City = "Split", Age = 27, PhoneNumber = "0913333333" },
+                new SinglePerson { Username = "dave", City = "Rijeka", Age = 31, PhoneNumber = "0914444444" },
+                new SinglePerson { Username = "eve", City = "Split", Age = 26, PhoneNumber = "0915555555" }
+            };
+
+            lock (syncRoot)
+            {
+                foreach (var p in sample)
+                {
+                    if (!people.ContainsKey(p.Username))
+                    {
+                        // Callback=null means these are virtual users usable as senders
+                        // but they won't receive letters themselves.
+                        people[p.Username] = new RegisteredPerson { Person = p, Callback = null };
+                    }
                 }
             }
         }
