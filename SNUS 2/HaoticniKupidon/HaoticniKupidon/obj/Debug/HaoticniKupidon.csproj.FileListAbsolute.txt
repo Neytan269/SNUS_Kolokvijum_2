@@ -6,3 +6,10 @@ C:\Users\User\Desktop\SNUS 2\HaoticniKupidon\HaoticniKupidon\obj\Debug\HaoticniK
 C:\Users\User\Desktop\SNUS 2\HaoticniKupidon\HaoticniKupidon\obj\Debug\HaoticniKupidon.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\SNUS 2\HaoticniKupidon\HaoticniKupidon\obj\Debug\HaoticniKupidon.exe
 C:\Users\User\Desktop\SNUS 2\HaoticniKupidon\HaoticniKupidon\obj\Debug\HaoticniKupidon.pdb
+C:\Users\Nenad\Documents\GitHub\SNUS_Kolokvijum_2\SNUS 2\HaoticniKupidon\HaoticniKupidon\bin\Debug\HaoticniKupidon.exe.config
+C:\Users\Nenad\Documents\GitHub\SNUS_Kolokvijum_2\SNUS 2\HaoticniKupidon\HaoticniKupidon\bin\Debug\HaoticniKupidon.exe
+C:\Users\Nenad\Documents\GitHub\SNUS_Kolokvijum_2\SNUS 2\HaoticniKupidon\HaoticniKupidon\bin\Debug\HaoticniKupidon.pdb
+C:\Users\Nenad\Documents\GitHub\SNUS_Kolokvijum_2\SNUS 2\HaoticniKupidon\HaoticniKupidon\obj\Debug\HaoticniKupidon.csproj.AssemblyReference.cache
+C:\Users\Nenad\Documents\GitHub\SNUS_Kolokvijum_2\SNUS 2\HaoticniKupidon\HaoticniKupidon\obj\Debug\HaoticniKupidon.csproj.CoreCompileInputs.cache
+C:\Users\Nenad\Documents\GitHub\SNUS_Kolokvijum_2\SNUS 2\HaoticniKupidon\HaoticniKupidon\obj\Debug\HaoticniKupidon.exe
+C:\Users\Nenad\Documents\GitHub\SNUS_Kolokvijum_2\SNUS 2\HaoticniKupidon\HaoticniKupidon\obj\Debug\HaoticniKupidon.pdb

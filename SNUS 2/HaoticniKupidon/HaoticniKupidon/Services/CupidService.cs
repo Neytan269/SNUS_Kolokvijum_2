@@ -179,7 +179,8 @@ namespace HaoticniKupidon.Services
                 new SinglePerson { Username = "bob", City = "Zagreb", Age = 30, PhoneNumber = "0912222222" },
                 new SinglePerson { Username = "carol", City = "Split", Age = 27, PhoneNumber = "0913333333" },
                 new SinglePerson { Username = "dave", City = "Rijeka", Age = 31, PhoneNumber = "0914444444" },
-                new SinglePerson { Username = "eve", City = "Split", Age = 26, PhoneNumber = "0915555555" }
+                new SinglePerson { Username = "eve", City = "Split", Age = 26, PhoneNumber = "0915555555" },
+                new SinglePerson { Username = "sarah", City = "Novi Sad", Age = 25, PhoneNumber = "0916666666" },
             };
 
             lock (syncRoot)
